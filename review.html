@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Details - Thrift Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for the review page */
+        .review-content {
+            border: 2px solid rgba(255, 255, 255, 0.5); /* Border with opacity */
+            padding: 20px;
+            background-color: #fff; /* White background */
+            font-size: 18px; /* Larger font size */
+            text-align: center; /* Center alignment */
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    
+        .review-content h2 {
+            font-size: 24px; /* Larger font size for headings */
+        }
+    
+        .review-content p {
+            margin-bottom: 15px; /* Add some space between paragraphs */
+            background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background for text */
+            padding: 10px; /* Add some padding to the text container */
+            border-radius: 5px; /* Round the corners of the text container */
+        }
+    </style>
+    
+    <div class="review-content">
+        <h2>Review Your Details</h2>
+        <p>Name: <span id="review-name"></span></p>
+        <p>Address: <span id="review-address"></span></p>
+        <p>Contact Number: <span id="review-contact"></span></p>
+        <p>Email Address: <span id="review-email"></span></p>
+        <button onclick="location.href='index.html'">Confirm and Checkout</button>
+    </div>
+
+<div id="footer"></div>
+
+<script>
+    // JavaScript code to include header and footer
+    fetch('header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header').innerHTML = html;
+        });
+
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footer').innerHTML = html;
+        });
+
+    // Get the review details from the local storage
+    const name = localStorage.getItem('name');
+    const address = localStorage.getItem('address');
+    const contact = localStorage.getItem('contact');
+    const email = localStorage.getItem('email');
+
+    // Display the review details
+    document.getElementById('review-name').innerText = name;
+    document.getElementById('review-address').innerText = address;
+    document.getElementById('review-contact').innerText = contact;
+    document.getElementById('review-email').innerText = email;
+</script>
+
+</body>
+</html>

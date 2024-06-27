@@ -1,0 +1,54 @@
+/* styles.css */
+body {
+    background-image: url('productpics/bg2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* You can adjust other background properties as needed */
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(249, 249, 249, 0.5);
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.product h2 {
+    margin-top: 20px;
+}
+
+.product p {
+    margin-bottom: 20px;
+}
+
+.product .price {
+    font-weight: bold;
+    color: #009688;
+}
+
+.add-to-cart {
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-to-cart:hover {
+    background-color: #ddd;
+}

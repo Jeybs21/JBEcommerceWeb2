@@ -1,0 +1,57 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Thrift Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for the about page */
+        .about-content {
+            border: 2px solid rgba(255, 255, 255, 0.5); /* Border with opacity */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.5); /* Background with opacity */
+            font-size: 18px; /* Larger font size */
+            text-align: center; /* Center alignment */
+        }
+
+        .about-content h2 {
+            font-size: 24px; /* Larger font size for headings */
+        }
+
+        .about-content p {
+            margin-bottom: 15px; /* Add some space between paragraphs */
+        }
+    </style>
+</head>
+<body>
+
+<div id="header"></div>
+
+<div class="about-content">
+    <h2>About Us</h2>
+    <p>Welcome to our thrift shop! We are dedicated to providing high-quality, affordable, and unique items to our customers. Our shop offers a wide range of pre-loved clothing, accessories, household items, and more. Whether you're looking for vintage treasures or everyday essentials, we have something for everyone.</p>
+    <p>At our thrift shop, sustainability and community are at the heart of what we do. By giving new life to gently used items, we contribute to reducing waste and promoting eco-friendly shopping practices. We believe that great style doesn't have to come at a high cost, and we strive to make fashion accessible to all.</p>
+    <p>Our team is passionate about curating a diverse selection of products, ensuring that each visit to our shop is a unique and exciting experience. Whether you're a thrifting enthusiast or a first-time shopper, we invite you to explore our collection and discover the joy of thrift shopping!</p>
+</div>
+
+<div id="footer"></div>
+
+<script>
+    // JavaScript code to include header and footer
+    fetch('header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header').innerHTML = html;
+        });
+
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footer').innerHTML = html;
+        });
+</script>
+
+</body>
+</html>

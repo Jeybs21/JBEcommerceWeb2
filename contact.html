@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Thrift Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for the contact page */
+        .contact-content {
+            border: 2px solid rgba(255, 255, 255, 0.5); /* Border with opacity */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.5); /* Background with opacity */
+            font-size: 18px; /* Larger font size */
+            text-align: center; /* Center alignment */
+        }
+
+        .contact-content h2 {
+            font-size: 24px; /* Larger font size for headings */
+        }
+
+        .contact-content p {
+            margin-bottom: 15px; /* Add some space between paragraphs */
+        }
+    </style>
+</head>
+<body>
+
+<div id="header"></div>
+
+<div class="contact-content">
+    <h2>Contact Us</h2>
+    <p>JB Miranda - 09612260238</p>
+    <p>Shop Location: 358 Magallanes St., Intramuros, Manila</p>
+</div>
+
+<div id="footer"></div>
+
+<script>
+    // JavaScript code to include header and footer
+    fetch('header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header').innerHTML = html;
+        });
+
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footer').innerHTML = html;
+        });
+</script>
+
+</body>
+</html>
